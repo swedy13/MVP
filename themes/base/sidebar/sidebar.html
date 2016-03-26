@@ -1,0 +1,19 @@
+<template name="sidebar">
+
+  <div class="sidebar">
+    {{#if currentUser}}  
+    <div class="container">
+      <div class="menu">
+        Sidebar Menu
+      </div>
+      <div class="panel">
+        Sidebar Panel
+      </div>
+    </div>    
+
+    {{else}}
+    {{> AccountsEntry}}
+    {{/if}}
+  </div>
+  
+</template>

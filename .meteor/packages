@@ -1,0 +1,36 @@
+#BASE PACKAGES
+meteor-base
+mobile-experience
+mongo
+session
+tracker
+reactive-var
+
+
+# ACCOUNTS PACKAGES
+digilord:faker          # Faker user account info
+accounts-base
+accounts-password
+accounts-facebook
+accounts-twitter
+accounts-google
+
+
+# JAVASCRIPT
+jquery
+underscore
+standard-minifiers      # JS/CSS minifiers run for production mode
+es5-shim                # ECMAScript 5 compatibility for older browsers.
+ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+
+# API
+http
+
+
+# UI
+blaze-html-templates
+mquandalle:stylus
+fortawesome:fontawesome
+copleykj:jquery-autosize
+copleykj:livestamp

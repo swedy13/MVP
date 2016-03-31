@@ -1,4 +1,4 @@
-Template.AccountsEntry.events({
+Template.AccountsEnter.events({
   'click .signin': function() {
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();

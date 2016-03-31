@@ -1,0 +1,96 @@
+@import 'themes/components/colors.styl'
+
+.navmenu
+  z-index 100
+  display none
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background-color rgba(0,0,0,.5)
+  
+  .navmenu-container
+    display flex
+    flex-direction column
+    justify-content space-between
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 20%
+    outline none
+    background-color white
+    box-shadow 0 0 12px #666
+    transform translateX(-100%)
+    transition .15s
+    overflow-y auto
+
+    .top
+      height 100px
+      width 100%
+      
+      .cover-image
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+        height 100%
+        width 100%
+        background-color #e5e5e5
+          
+        .avatar
+          height 50px
+          width 50px
+          margin -3px 0 5px
+          border 1px solid gray
+          border-radius 100%
+          background-color blue
+          
+        .username
+          display block
+
+          span
+            color blue
+
+    ul
+      margin 8px 0
+
+      hr
+        margin 0px
+        border none
+        border-bottom 1px solid #e5e5e5
+      
+      li
+        height 50px
+
+        span
+          display flex
+          align-items center
+          height 100%
+          padding-left 8px
+          
+          i
+            display inline-block
+            margin-right 4px
+        
+          p
+            display inline-block
+
+          &.disabled
+            i
+              color gray
+
+            p
+              color gray
+
+    .bottom
+      background-color #f8f8f8
+
+      ul
+        margin-top 6px
+        margin-bottom 4px
+
+        p
+          color darker-gray
+      

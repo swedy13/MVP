@@ -1,18 +1,60 @@
+@import 'themes/components/colors.styl'
+
+// MOBILE
 .sidebar
-  .container
-    padding 0 8px
+  .sidebar-container
+    display flex
 
-    .menu
-      display none
+    .panel
+      position absolute
+      top 75px
+      bottom 0
+      width 100%
 
 
+// TABLET
 @media screen and (min-width: 700px)
   .sidebar
-    .container
+    .sidebar-container
       .menu
+        z-index 70
         display flex
         flex-direction column
+        width 45px
+        align-items center
+        position fixed
+        right 0
+        background-color #777
+        top 32px
+        bottom 0
 
-      .container
-        display flex
-        flex-direction column
+        ul
+          margin-top 5px
+        
+        // li
+
+        // a
+
+        // span
+
+        i
+          margin 7px 0
+          font-size 1.5em
+          color white
+          text-shadow 1px 1px 1px #333
+    
+      .panel
+        z-index 50
+        top 32px
+        right 45px
+        width 400px
+        padding 8px
+        background-color #ddd
+        box-shadow -5px 0 12px 0px #bbb, -2px 0 2px #888
+
+
+
+// DESKTOP
+// @media screen and (min-width: 1025px)
+//   .sidebar
+//     .sidebar-container

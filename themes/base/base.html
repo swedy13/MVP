@@ -4,9 +4,6 @@
 </head>
 
 
-<body>
-    {{>navbar}}
-    {{>sidebar}}
-    {{>main}}
-    {{>footer}}
-</body>
+<template name="Base">
+  {{> Template.dynamic template=getContent}}
+</template>

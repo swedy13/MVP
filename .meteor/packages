@@ -19,6 +19,7 @@ accounts-google
 # JAVASCRIPT
 jquery
 underscore
+hammer:hammer           # JS mobile events (tap, swipe, fastclick, etc)
 standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
@@ -34,3 +35,11 @@ mquandalle:stylus
 fortawesome:fontawesome
 copleykj:jquery-autosize
 copleykj:livestamp
+
+
+# ROUTING
+iron:router
+iron:layout
+zimme:active-route      # For route-based menu highlights and the like
+# ccorcos:transitioner  # For animations between routes (used for mobile swipe, etc)
+

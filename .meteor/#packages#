@@ -40,4 +40,7 @@ copleykj:livestamp
 # ROUTING
 kadira:flow-router
 kadira:blaze-layout
+# iron:router
+# iron:layout
 zimme:active-route      # For route-based menu highlights and the like
+# ccorcos:transitioner  # For animations between routes (used for mobile swipe, etc)

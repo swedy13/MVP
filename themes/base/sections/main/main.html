@@ -1,0 +1,33 @@
+<template name="Main">  
+  <div class="main">
+    <div class="main-container">
+      
+      {{#if mobile}}
+      <div class="content">
+        Main Content
+      </div>
+
+      {{else}}
+      {{#if tablet}}
+      <div class="content">
+        Main Content
+      </div>
+      <div class="right-rail">
+        Right Rail
+      </div>
+      {{else}}
+      <div class="left-rail">
+        Left Rail
+      </div>
+      <div class="content">
+        Main Content
+      </div>
+      <div class="right-rail">
+        Right Rail
+      </div>
+      {{/if}}
+      {{/if}}
+      
+    </div>  
+  </div>  
+</template>

@@ -1,0 +1,56 @@
+<template name="SubNav">
+  <div class="subnav">
+    
+    {{#if currentUser}}
+    <ul>
+      <li class="subscriptions">
+        <a href="">
+          <span>
+            <i class="subscriptions fa fa-rss"></i>
+          </span>
+        </a>
+      </li>
+      <li class="top-scores center">
+        <a href="">
+          <span>
+            <i class=" top-scores fa fa-trophy"></i>            
+          </span>
+        </a>
+      </li>
+      <li class="signin">
+        <a href="">
+          <span>
+            <i class="signin fa fa-sign-in"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+    
+    {{else}}
+    <ul>
+      <li class="subscriptions">
+        <a href="">
+          <span>
+            <i class="subscriptions fa fa-rss"></i>
+          </span>
+        </a>
+      </li>
+      <li class="top-scores center">
+        <a href="">
+          <span>
+            <i class=" top-scores fa fa-trophy"></i>            
+          </span>
+        </a>
+      </li>
+      <li class="signin">
+        <a href="">
+          <span>
+            <i class="signin fa fa-sign-in"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+    {{/if}}
+    
+  </div>
+</template>

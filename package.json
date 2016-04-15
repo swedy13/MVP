@@ -1,0 +1,22 @@
+{
+  "name": "MVP",
+  "version": "1.0.0",
+  "description": "Mythros MVP",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swedy13/MVP.git"
+  },
+  "author": "Mark Swedberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swedy13/MVP/issues"
+  },
+  "homepage": "https://github.com/swedy13/MVP#readme",
+  "devDependencies": {
+    "eslint-plugin-react": "^4.3.0"
+  }
+}

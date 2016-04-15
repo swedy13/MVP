@@ -5,5 +5,15 @@
 
 
 <template name="Base">
-  {{> Template.dynamic template=getContent}}
+  {{> Nav}}
+  
+  {{#if mobile}}
+  {{> Main}}
+
+  {{else}}
+  {{> Main}}
+  {{> Sidebar}}
+  {{/if}}
+  
+  {{> Footer}}
 </template>

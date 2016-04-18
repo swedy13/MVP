@@ -1,4 +1,4 @@
-#BASE PACKAGES
+# BASE PACKAGES
 meteor-base
 mobile-experience
 mongo
@@ -20,7 +20,6 @@ accounts-google
 jquery
 underscore
 hammer:hammer           # JS mobile events (tap, swipe, fastclick, etc)
-standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
@@ -41,3 +40,6 @@ copleykj:livestamp
 kadira:flow-router
 kadira:blaze-layout
 zimme:active-route      # For route-based menu highlights and the like
+standard-minifier-css
+standard-minifier-js
+themes-base

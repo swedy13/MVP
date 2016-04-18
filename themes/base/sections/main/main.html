@@ -4,13 +4,13 @@
       
       {{#if mobile}}
       <div class="content">
-        Main Content
+        {{> Template.dynamic template=main}}
       </div>
 
       {{else}}
       {{#if tablet}}
       <div class="content">
-        Main Content
+        {{> Template.dynamic template=main}}
       </div>
       <div class="right-rail">
         Right Rail
@@ -20,7 +20,7 @@
         Left Rail
       </div>
       <div class="content">
-        Main Content
+        {{> Template.dynamic template=main}}
       </div>
       <div class="right-rail">
         Right Rail

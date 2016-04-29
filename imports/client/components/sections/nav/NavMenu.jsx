@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 // Components
-import Menu from '../../views/Menu.jsx';
+import Menu from '../../views/Menu.jsx'
 
 
 export default class NavMenu extends Component {
@@ -11,7 +11,7 @@ export default class NavMenu extends Component {
 																<Menu listItems={navMenu}/>
 																<Menu listItems={settingsMenu}/>
 												</div>
-								);
+								)
 				}
 }
 

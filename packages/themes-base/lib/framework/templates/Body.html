@@ -1,33 +1,33 @@
-<template name="Body">  
-  <div class="body">
-    <div class="body-container">
-      
-      {{#if mobile}}
-      <div class="content">
-        {{> Template.dynamic template=body}}
-      </div>
+<template name="Body">
+		<div class="body">
+				<div class="body-container">
 
-      {{else}}
-      {{#if tablet}}
-      <div class="content">
-        {{> Template.dynamic template=body}}
-      </div>
-      <div class="right-rail">
-        Right Rail
-      </div>
-      {{else}}
-      <div class="left-rail">
-        Left Rail
-      </div>
-      <div class="content">
-        {{> Template.dynamic template=body}}
-      </div>
-      <div class="right-rail">
-        Right Rail
-      </div>
-      {{/if}}
-      {{/if}}
-      
-    </div>  
-  </div>  
+						{{#if mobile}}
+						<div class="content">
+								{{> Template.dynamic template=body}}
+						</div>
+
+						{{else}}
+						{{#if tablet}}
+						<div class="content">
+								{{> Template.dynamic template=body}}
+						</div>
+						<div class="right-rail">
+								Right Rail
+						</div>
+						{{else}}
+						<div class="left-rail">
+								Left Rail
+						</div>
+						<div class="content">
+								{{> Template.dynamic template=body}}
+						</div>
+						<div class="right-rail">
+								Right Rail
+						</div>
+						{{/if}}
+						{{/if}}
+
+				</div>
+		</div>
 </template>

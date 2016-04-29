@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 // Components
-import Icon from './Icon.jsx';
+import Icon from './Icon.jsx'
 
 
 export default class Menu extends Component {
 				render() {
 								return (
-												<ul>{this.list()}</ul>
+												<ul className={styles.margin}>{this.list()}</ul>
 								);
 				}
 

@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 // Components
-import NavMenu from './NavMenu.jsx';
+import Navbar		from  './Navbar.jsx'
+import NavSub		from './NavSub.jsx'
+import NavMenu from './NavMenu.jsx'
 
 
 export default class Nav extends Component {
 				render() {
 								return (
-												<NavMenu/>
-								);
+												<div class="nav">
+																<Navbar/>
+																<NavSub/>
+																<NavMenu/>
+												</div>
+								)
 				}
 }

@@ -37,12 +37,8 @@ copleykj:livestamp
 
 
 # ROUTING
-kadira:flow-router
-kadira:blaze-layout
-zimme:active-route      # For route-based menu highlights and the like
+# kadira:flow-router
+# kadira:blaze-layout
+# zimme:active-route      # For route-based menu highlights and the like
 standard-minifier-css
 standard-minifier-js
-<<<<<<< HEAD
-=======
-themes-base
->>>>>>> 99bee4fff07a6a0b89072c51e8eec92b93f5358e

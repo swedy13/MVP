@@ -1,0 +1,50 @@
+// MOBILE
+  .body
+    height 100%
+    width 100vw
+
+    .body-container
+      margin-top 64px
+      margin-bottom 32px
+      padding 12px 8px
+    
+
+// TABLET
+@media screen and (min-width: 700px)
+  .body
+    width calc(100vw - 45px)
+
+    .body-container
+      display flex
+      align-items baseline
+      justify-content center
+
+      .content
+        max-width 460px
+        width 100%
+        min-width 360px
+        margin 8px
+        background lightblue
+
+      .right-rail
+        max-width 250px
+        width 50%
+        min-width 200px
+        background pink
+
+
+// DESKTOP
+@media (min-width: 1025px)
+  .body
+    .body-container
+      margin-top 32px
+      
+      .left-rail
+        max-width 250px
+        width 50%
+        min-width 200px
+        background green
+
+      .center
+        max-width 500px
+        min-width 400px

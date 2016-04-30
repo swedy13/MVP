@@ -1,0 +1,117 @@
+<template name="NavMenu">
+
+  <div class="navmenu">
+    <div class="navmenu-container" tabindex="0">
+
+      <div class="top">
+        <div class="cover-image">
+          <div class="avatar"></div>
+          {{#if currentUser}}
+          <p class="username">Username</p>
+          {{else}}
+          <a href="">
+            <p class="username"><span>Sign in</span> or <span>Register</span></p>
+          </a>
+          {{/if}}
+        </div>
+
+        <ul class="tall wide white vertical">
+          <li class="active">
+            <a href='/subscriptions'>
+              <span>
+                <i class="subscriptions fa fa-rss fa-fw"></i>
+                <p>Subscriptions</p>
+              </span>
+            </a>
+          </li>
+
+          <hr class="thin solid lightest gray horizontal"/>
+
+          <li class="">
+            <a href="/top-scores">
+              <span>
+                <i class="top-scores fa fa-trophy fa-fw"></i>
+                <p>Top Scores</p>
+              </span>
+            </a>
+          </li>
+          <hr class="thin solid lightest gray horizontal"/>
+          <li class="{{disabled}}">
+            <a href="">
+              <span>
+                <i class="my-scores fa fa-line-chart fa-fw"></i>
+                <p>My Scores</p>
+              </span>
+            </a>
+          </li>
+          <hr class="thin solid lightest gray horizontal"/>
+          <li class="{{disabled}}">
+            <a href="">
+              <span>
+                <i class="stats fa fa-table fa-fw"></i>
+                <p>Stats</p>
+              </span>
+            </a>
+          </li>
+
+          <hr class="thin solid lightest gray horizontal"/>
+          
+          <li class="{{disabled}}">
+            <a href="">
+              <span>
+                <i class="achievements fa fa-star fa-fw"></i>
+                <p>Achievements</p>
+              </span>
+            </a>
+          </li>
+          <hr class="thin solid lightest gray horizontal"/>
+          <li class="{{disabled}}">
+            <a href="">
+              <span>
+                <i class="profile fa fa-user fa-fw"></i>
+                <p>Profile</p>
+              </span>
+            </a>
+          </li>
+
+          <hr class="thin solid lightest gray horizontal"/>
+          
+          <li class="{{disabled}}">
+            <a href="">
+              <span>
+                <i class="connections fa fa-users fa-fw"></i>
+                <p>Connections</p>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bottom">
+        <ul class="tall wide gray vertical">
+          <li>
+            <a href="">
+              <span>
+                <i class="help fa fa-question fa-fw"></i>
+                <p>Help</p>
+              </span>
+            </a>
+          </li>
+          <li class="{{invisible}}">
+            <a href="">
+              <span>
+                <i class="settings fa fa-gear fa-fw"></i>
+                <p>Settings</p>
+              </span>
+            </a>
+          </li>
+          <li class="{{invisible}}">
+            <a href="">
+              {{> AccountsExit}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>

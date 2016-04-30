@@ -1,0 +1,19 @@
+<head>
+  <title>Mythros</title>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+
+
+<template name="Base">
+  {{> Nav}}
+  
+  {{#if mobile}}
+  {{> Body}}
+
+  {{else}}
+  {{> Body}}
+  {{> Sidebar}}
+  {{/if}}
+  
+  {{> Footer}}
+</template>

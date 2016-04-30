@@ -1,0 +1,71 @@
+// @import 'themes/components/colors.styl'
+
+ul, ol
+  overflow-x hidden
+  overflow-y auto
+
+  // Orientation
+  &.vertical
+    display flex
+    flex-direction column
+
+    
+  // Size
+  &.short
+    li
+      height 20px
+      
+  &.tall
+    li
+      height 50px
+      
+  &.narrow
+    li
+      max-width 100px
+      
+  &.wide
+    li
+      max-width 300px
+      
+  &.widest
+    li
+      width 100vw
+
+
+  // States
+  li
+    &.active
+      background-color #f5f5f5
+
+    &.disabled
+      i, p
+        color gray
+
+    &.invisible
+      display none
+
+
+  // Content
+  li
+    padding 0 8px
+    
+    span
+      display flex
+      align-items center
+      height 100%
+      width 100%
+
+      i
+        margin-right 4px
+
+
+  // Themes
+  &.transparent
+    background-color transparent
+    
+  &.white
+    background-color white
+    
+  &.gray
+    background-color lightest-gray
+    color darker-gray

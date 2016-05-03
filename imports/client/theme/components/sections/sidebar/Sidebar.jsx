@@ -9,7 +9,7 @@ export default class Sidebar extends Component {
 								return (
 												<div className="sidebar">
 																<div className="sidebar-menu">
-																				<Menu listItems={sidebarList}/>
+																				<Menu listItems={sidebarList} listType="icon"/>
 																</div>
 																<div className="sidebar-panel">
 																				Panel

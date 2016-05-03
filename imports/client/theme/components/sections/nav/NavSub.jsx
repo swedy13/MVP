@@ -1,21 +1,27 @@
 import React, { Component } from 'react'
 
 //  Comonents
-import Menu from '../../views/menus/Menu.jsx'
+import Menu from '../../views/Menu.jsx'
 
 
 export default class NavSub extends Component {
 				render() {
 								return (
-												<div className="submenu">
-																<Menu listItems={subMenu}/>
+												<div className="navsub">
+																<Menu listItems={tabs} listType={this.getDevice()}/>
 												</div>
-								)
+								);
+				}
+
+				getDevice() {
+								if (this.props.deviceType === 'mobile') {
+												return 'icon';
+								}
 				}
 }
 
 
-subMenu = [
+tabs = [
 				'Subscriptions',
 				'Top Scores',
 				'Sign In'

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // Components
-import Menu from '../../views/menus/Menu.jsx'
+import Menu from '../../views/Menu.jsx'
 
 
 export default class NavMenu extends Component {

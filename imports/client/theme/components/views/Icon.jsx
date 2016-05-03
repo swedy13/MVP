@@ -9,9 +9,22 @@ export default class Icon extends Component {
 				}
 
 				getClass() {
-								let prop = this.props.icon;
-								let icon = transform[prop];
-								return `fa fa-fw ' + ${icon}`;
+								let type = this.getType();
+								let data = this.props.data;
+								let icon = transform[data];
+
+								return `fa fa-fw ${icon} ${type}`;
+				}
+
+				getType() {
+								let type = this.props.iconType;
+
+								if (type === undefined) {
+												return 'default';
+								}
+								else {
+												return type;
+								}
 				}
 }
 
@@ -27,7 +40,8 @@ transform = {
 				'top-scores'				: 'fa-trophy',
 
 				// Utility
-				'exit'					: 'fa-sign-out',
+				'sign-in'		: 'fa-sign-in',
+				'sign-out'	: 'fa-sign-out',
 				'help'					: 'fa-question',
 				'settings'	: 'fa-gear'
 }

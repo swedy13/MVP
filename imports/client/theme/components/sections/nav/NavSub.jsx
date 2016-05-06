@@ -8,7 +8,11 @@ export default class NavSub extends Component {
 				render() {
 								return (
 												<div className="navsub">
-																<Menu listItems={tabs} listType={this.getDevice()}/>
+																<Menu menuClass="short full-width horizontal dividers"
+																						iconClass="bw left"
+																						textClass="txt-lightest"
+																						listItems={navsubList}
+																						listType={this.getDevice()}/>
 												</div>
 								);
 				}
@@ -21,7 +25,7 @@ export default class NavSub extends Component {
 }
 
 
-tabs = [
+navsubList = [
 				'Subscriptions',
 				'Top Scores',
 				'Sign In'

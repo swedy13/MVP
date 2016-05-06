@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import RouteHandler from 'react-router';
 
 
 export default class Body extends Component {
 				render() {
 								return (
 												<div className="body">
-																<div className="body-container"></div>
+																{React.cloneElement(this.props.children, {width: this.props.width})}
 												</div>
-								)
+								);
 				}
 }

@@ -1,39 +1,104 @@
-// @import 'themes/components/colors.styl'
+@import './colors.styl'
 
 ul, ol
   overflow-x hidden
   overflow-y auto
 
-  // Orientation
+  li
+    display flex
+    align-items baseline
+    justify-content center
+
+
+// ----- ORIENTATION ----- //
+ul, ol
   &.vertical
     display flex
     flex-direction column
+    align-items center
+    justify-content space-around
 
-    
-  // Size
+  &.horizontal
+    display flex
+    align-items center
+    justify-content space-around
+
+
+// ----- SIZE ----- //
+ul, ol
+  // Height
+  &.shortest
+    height 20px
+
   &.short
-    li
-      height 20px
-      
+    height 30px
+
   &.tall
+    height 40px
+
+  &.tallest
+    height 50px
+
+  &.full-height
+    height 100%
+
+  &.shortest, &.short, &.tall, &.tallest, &.full-height
     li
-      height 50px
-      
-  &.narrow
-    li
-      max-width 100px
-      
+      width 100%
+
+  // &.thinnest
+  &.thin
+    max-width 100px
+
   &.wide
-    li
-      max-width 300px
-      
-  &.widest
-    li
-      width 100vw
+    max-width 300px
+
+  // &.widest
+
+  &.full-width
+    width 100%
 
 
-  // States
+// ----- SPACING ----- //
+ul, ol
+  &.vertical
+    &.tight
+      li
+        padding 4px 0
+
+    &.regular
+      li
+        padding 8px 0
+
+    &.loose
+      li
+        padding 12px 0
+
+    &.max-spacing
+      justify-content space-between
+
+  &.horizontal
+    li
+      padding 0 8px
+
+
+// ----- DIVIDERS ----- //
+ul, ol
+  &.dividers
+    &.horizontal
+      li
+        border-right 1px solid border-default
+
+        &:last-child
+          border-right none
+
+
+// ----- STATES ----- //
+ul, ol
   li
+    &:hover
+      transition .1s
+
     &.active
       background-color #f5f5f5
 
@@ -44,28 +109,52 @@ ul, ol
     &.invisible
       display none
 
+    &:hover
+      &.app-bg
+        &.subscriptions,
+        &.search,
+        &.profile
+          background-color dark-blue //rgba(80, 92, 226, 1)
 
-  // Content
-  li
-    padding 0 8px
-    
-    span
-      display flex
-      align-items center
-      height 100%
-      width 100%
+        &.stats
+          background-color dark-red //rgba(234, 31, 38, 1)
 
-      i
-        margin-right 4px
+        &.top-scores,
+        &.achievements
+          background-color dark-yellow //rgba(245, 204, 0, 1)
+
+        &.connections,
+        &.my-scores
+          background-color dark-green //rgba(55, 184, 0, 1)
+
+        &.help,
+        &.settings,
+        &.sign-out,
+        &.sign-in
+          background-color darkest-gray  //rgba(51, 51, 51, 1)
 
 
-  // Themes
-  &.transparent
-    background-color transparent
-    
-  &.white
-    background-color white
-    
-  &.gray
-    background-color lightest-gray
-    color darker-gray
+  // // Content
+  // li
+  //   padding 0 8px
+
+  //   span
+  //     display flex
+  //     align-items center
+  //     height 100%
+  //     width 100%
+
+  //     i
+  //       margin-right 4px
+
+
+  // // Themes
+  // &.transparent
+  //   background-background-color transparent
+
+  // &.white
+  //   background-background-color white
+
+  // &.gray
+  //   background-background-color lightest-gray
+  //   background-color darker-gray

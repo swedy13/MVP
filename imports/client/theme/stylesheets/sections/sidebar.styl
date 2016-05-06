@@ -1,43 +1,69 @@
-// MOBILE
-// This section is not rendered for mobile devices
+@import '../views/colors.styl'
+
+// Default
+.sb
+  z-index 70
+  position fixed
+  bottom 0
+  right 0
+  height calc(100vh - 32px)
+  width 45px
+  background-color #888
+
+  .sb-panel
+    display none
 
 
-// TABLET
-@media (min-width: 701px)
-  .sidebar
-    .menu
-      z-index 70
-      display flex
-      flex-direction column
-      align-items center
-      position fixed
-      right 0
-      top 32px
-      bottom 0
-      width 45px
-      background-color #777
-
-      ul
-        margin-top 5px
-
-        li
-          i
-            margin 7px 0
-            font-size 1.5em
-            color white
-            text-shadow 1px 1px 1px #333
-
-    .panel
-      z-index 50
-      display none
-      position fixed
-      top 32px
-      bottom 0
-      right 45px
-      width 400px
-      padding 8px
-      background-color #ddd
-      box-shadow -5px 0 12px 0px #bbb, -2px 0 2px #888
+// Mobile
+@media (max-width: 736px)
+  .sb
+    display none
 
 
-// @media (min-width: 1025px)
+// Tablet & Desktop
+@media (min-width: 737px)
+  .sb
+    display flex
+
+
+// Tablet
+// @media (min-width: 701px)
+//   .sb
+//     .sb-menu
+//   .sidebar
+//     .menu
+//       z-index 70
+//       display flex
+//       flex-direction column
+//       align-items center
+//       position fixed
+//       right 0
+//       top 32px
+//       bottom 0
+//       width 45px
+//       background-color #777
+
+//       ul
+//         margin-top 5px
+
+//         li
+//           i
+//             margin 7px 0
+//             font-size 1.5em
+//             color white
+//             text-shadow 1px 1px 1px #333
+
+//     .panel
+//       z-index 50
+//       display none
+//       position fixed
+//       top 32px
+//       bottom 0
+//       right 45px
+//       width 400px
+//       padding 8px
+//       background-color #ddd
+//       box-shadow -5px 0 12px 0px #bbb, -2px 0 2px #888
+
+
+// // @media (min-width: 1025px)

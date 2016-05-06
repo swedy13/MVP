@@ -25,7 +25,7 @@ export default class Theme extends Component {
 												return (
 																<div className="mobile">
 																				<Nav deviceType={"mobile"}/>
-																				<Body/>
+																				<Body children={this.props.children} width={width}/>
 																				<Footer/>
 																</div>
 												);
@@ -35,7 +35,7 @@ export default class Theme extends Component {
 												return (
 																<div className="tablet">
 																				<Nav deviceType={"tablet"}/>
-																				<Body/>
+																				<Body children={this.props.children} width={width}/>
 																				<Sidebar/>
 																				<Footer/>
 																</div>
@@ -46,7 +46,7 @@ export default class Theme extends Component {
 												return (
 																<div className="desktop">
 																				<Nav deviceType={"desktop"}/>
-																				<Body/>
+																				<Body children={this.props.children} width={width}/>
 																				<Sidebar/>
 																				<Footer/>
 																</div>

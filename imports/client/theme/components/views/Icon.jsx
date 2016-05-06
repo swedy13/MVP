@@ -4,31 +4,32 @@ import React, { Component } from 'react'
 export default class Icon extends Component {
 				render() {
 								return (
-												<i className={this.getClass()}></i>
+												<i className={this.renderClass()}></i>
 								)
 				}
 
-				getClass() {
-								let type = this.getType();
-								let data = this.props.data;
-								let icon = transform[data];
+				renderClass() {
+								let propClass					= this.getClass();
+								let inherentClass = transform[this.props.data];
 
-								return `fa fa-fw ${icon} ${type}`;
+								return `fa fa-fw ${propClass} ${inherentClass}`;
 				}
 
-				getType() {
-								let type = this.props.iconType;
+				// Returns any classes passed through the 'iconClass' props
+				getClass() {
+								let iconClass = this.props.iconClass;
 
-								if (type === undefined) {
-												return 'default';
+								if (iconClass === undefined) {
+												return '';
 								}
 								else {
-												return type;
+												return iconClass;
 								}
 				}
 }
 
 
+// Converts the <li> data into a string (used as a class)
 transform = {
 				// Apps
 				'achievements'		: 'fa-star',

@@ -1,64 +1,68 @@
 .nav
-  z-index 100
-  position fixed
-  top 0
-  left 0
-  right 0
-  height 100%
-  
   .navmenu
-    z-index 110
     display none
-    position relative
-    background-color rgba(0,0,0,.5)
 
-    .navmenu-container
-      display flex
-      flex-direction column
-      justify-content space-between
-      height 100vh
-      width 80%
-      max-width 300px
-      background-color white
-      outline none
-      box-shadow 0 0 12px #666
-      transform translateX(-100%)
-      transition .15s
-      overflow-y auto
+// .nav
+//   z-index 100
+//   position fixed
+//   top 0
+//   left 0
+//   right 0
+//   height 100%
 
-      .top
-        .cover-image
-          display flex
-          flex-direction column
-          align-items center
-          justify-content center
-          height 100px
-          background-color #e5e5e5
+//   .navmenu
+//     z-index 110
+//     display none
+//     position relative
+//     background-color rgba(0,0,0,.5)
 
-          .avatar
-            height 50px
-            width 50px
-            margin -3px 0 5px
-            border 1px solid gray
-            border-radius 100%
-            background-color blue
+//     .navmenu-container
+//       display flex
+//       flex-direction column
+//       justify-content space-between
+//       height 100vh
+//       width 80%
+//       max-width 300px
+//       background-color white
+//       outline none
+//       box-shadow 0 0 12px #666
+//       transform translateX(-100%)
+//       transition .15s
+//       overflow-y auto
 
-          .username
-            span
-              color blue
+//       .top
+//         .cover-image
+//           display flex
+//           flex-direction column
+//           align-items center
+//           justify-content center
+//           height 100px
+//           background-color #e5e5e5
+
+//           .avatar
+//             height 50px
+//             width 50px
+//             margin -3px 0 5px
+//             border 1px solid gray
+//             border-radius 100%
+//             background-color blue
+
+//           .username
+//             span
+//               color blue
 
 
-// TABLET
-// Uses the mobile menu
+// // TABLET
+// // Uses the mobile menu
 
 
-// DESKTOP
-@media (min-width: 1025px)
-  .nav
-    .navmenu
-      z-index 89
-      margin-top 34px
-      background-color transparent
-  
-      .navmenu-container
-        height calc(100vh - 34px)
+// // DESKTOP
+// @media (min-width: 1025px)
+//   .nav
+//     .navmenu
+//       z-index 89
+//       margin-top 34px
+//       background-color transparent
+
+//       .navmenu-container
+//         height calc(100vh - 34px)

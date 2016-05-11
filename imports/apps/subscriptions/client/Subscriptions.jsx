@@ -14,7 +14,7 @@ export default class Subscriptions extends Component {
 								let width = this.props.width;
 
 								// Mobile
-								if (width <= 736) {
+								if (width <= 666) {
 												return (
 																<div className="main subscriptions">
 																				<div className="content">
@@ -25,11 +25,14 @@ export default class Subscriptions extends Component {
 								}
 
 								// Tablet
-								else if (width > 737 && width < 1025) {
+								else if (width > 666 && width < 1025) {
 												return (
 																<div className="main subscriptions">
 																				<div className="content">
 																								<Feed/>
+																				</div>
+																				<div className="right-rail">
+																								Right Rail
 																				</div>
 																</div>
 												);

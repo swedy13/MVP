@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Components
-import Paper from '../../../../../client/theme/components/views/Paper.jsx';
+import Paper from '../../../../../theme/components/views/Paper.jsx';
 
 
 export default class Post extends Component {

@@ -9,7 +9,7 @@ Template.AccountsEnter.events({
       }
     });
   },
-  
+
   'click .signup': function() {
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();

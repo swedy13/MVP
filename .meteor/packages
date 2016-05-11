@@ -7,13 +7,21 @@ tracker
 reactive-var
 
 
-# ACCOUNTS PACKAGES
-digilord:faker          # Faker user account info
+# ACCOUNTS
 accounts-base
 accounts-password
 accounts-facebook
 accounts-twitter
 accounts-google
+
+
+# DATA
+digilord:faker          # Faker user account info
+
+
+# BUILD
+standard-minifier-js
+standard-minifier-css
 
 
 # JAVASCRIPT
@@ -22,6 +30,10 @@ underscore
 hammer:hammer           # JS mobile events (tap, swipe, fastclick, etc)
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+
+# REACT
+react-meteor-data
 
 
 # API
@@ -34,11 +46,3 @@ mquandalle:stylus
 fortawesome:fontawesome
 copleykj:jquery-autosize
 copleykj:livestamp
-
-
-# ROUTING
-# kadira:flow-router
-# kadira:blaze-layout
-# zimme:active-route      # For route-based menu highlights and the like
-standard-minifier-css
-standard-minifier-js

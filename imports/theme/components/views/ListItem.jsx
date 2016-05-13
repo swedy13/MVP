@@ -2,67 +2,80 @@ import React, { Component, PropTypes } from 'react';
 
 // Components
 import { Link } from 'react-router';
-import FontIcon from './FontIcon.jsx';
 
 
 export default class ListItem extends Component {
-				handleClick(event) {
-								if (this.props.onClick && !this.props.disabled) {
-												console.log(this, event);
-												this.props.onClick(event, this);
-								}
-				}
-
 				render() {
-								const {content, children, style, icon,
-															onClick, selected, disabled, ...others} = this.props;
+								const {style, onClick, selected, disabled, ...others} = this.props;
 
 								return (
 												<li className={style} onClick={this.handleClick}>
-																{icon ? icon : null}
-																<span>{content}</span>
-																{children}
+																{this.renderContent()}
 												</li>
 								);
 				}
 
 				getContent() {
-								// FontIcon-Only Menu
-								if (type === 'icon') {
-												return (
-																<span>
-																				<FontIcon style={icon} icon={stringify}></FontIcon>
-																</span>
+								const {content, children, icon} = this.props;
+
+								console.log('Get');
+								console.log(content);
+								console.log(children);
+								console.log(icon);
+
+								let items = [];
+								if (content !== undefined) {items.push(<p key="content">{content}</p>);}
+								if (children !== undefined) {items.push(<p key="children">{children}</p>);}
+								if (icon !== undefined) {items.push(icon);}
+
+								return items;
+				}
+
+				renderContent() {
+								const {link, icon, content, children} = this.props;
+
+								console.log('Render');
+								console.log(content);
+								console.log(children);
+								console.log(icon);
+
+								let container;
+								if (link === '') {
+												container = (
+																<button>
+																				<span>
+																								{this.getContent()}
+																				</span>
+																</button>
 												);
 								}
-
-								// Text-Only Menu
-								else if (type === 'text') {
-												return (
-																<span>
-																				<p className={text}>{item}</p>
-																</span>
-												);
-								}
-
-								// FontIcon + Text Menu
 								else {
-												return (
-																<span>
-																				<FontIcon iconClass={icon} data={stringify}></FontIcon>
-																				<p className={text}>{item}</p>
-																</span>
+												container = (
+																<Link to={`/${link}`}>
+																				<span>
+																								{this.getContent()}
+																				</span>
+																</Link>
 												);
+								}
+
+								return container;
+				}
+
+				handleClick(event) {
+								if (this.props.onClick && !this.props.disabled) {
+												this.props.onClick(event, this);
 								}
 				}
 }
 
 
 ListItem.propTypes = {
-				content: PropTypes.string.isRequired,
+				content: PropTypes.string,
 				children: PropTypes.any,
 				style: PropTypes.string,
-				icon: PropTypes.element,
+				icon: PropTypes.any,
+				link: PropTypes.string,
 				onClick: PropTypes.func,
 				selected: React.PropTypes.bool,
 				disabled: PropTypes.bool,
@@ -70,6 +83,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
 				style: '',
+				link: '',
 				disabled: false,
 				selected: false,
 }

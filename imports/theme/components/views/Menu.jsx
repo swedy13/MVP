@@ -1,30 +1,6 @@
 import React, { Component, PropTypes, Children } from 'react';
-
-// Components
 import ListItem from './ListItem.jsx';
 
-
-/*renderList() {
-	*				let list  = this.props.listClass;
-	*				let icon		= this.props.iconClass;
-	*				let text  = this.props.textClass;
-	*				let link  = this.props.linkType;
-	*				let items = this.props.listItems;
-	*				let type		= this.props.listType;
-	*				let data		= [];
-	*
-	*				items.map((item, key) => {
-	*								data.push( <ListItem key={key}
-	*listClass={list}
-	*iconClass={icon}
-	*textClass={text}
-	*linkType={link}
-	*listItems={item}
-	*listType={type}/>);
-	*				});
-	*
-	*				return data;
-	*}*/
 
 export default class Menu extends Component {
 				render() {
@@ -33,14 +9,6 @@ export default class Menu extends Component {
 																{this.renderItems()}
 												</ul>
 								);
-				}
-
-				show() {
-								this.setState({active: true});
-				}
-
-				hide() {
-								this.setState({active: false});
 				}
 
 				renderItems() {
@@ -66,6 +34,20 @@ export default class Menu extends Component {
 								this.setState({active: false});
 				}
 
+				handleDocumentClick(event) {
+								if (this.state.active && !events.targetIsDescendant(event, ReactDOM.findDOMNode(this))) {
+												this.setState({active: false});
+								}
+				}
+
+				show() {
+								this.setState({active: true});
+				}
+
+				hide() {
+								this.setState({active: false});
+				}
+
 				componentWillUpdate(nextProps, nextState) {
 								if (!this.state.active && nextState.active) {
 												events.addEventsToDocument({click: this.handleDocumentClick});
@@ -87,24 +69,9 @@ export default class Menu extends Component {
 												events.removeEventsFromDocument({click: this.handleDocumentClick});
 								}
 				}
-
-				handleDocumentClick(event) {
-								if (this.state.active && !events.targetIsDescendant(event, ReactDOM.findDOMNode(this))) {
-												this.setState({active: false});
-								}
-				}
 }
 
 
-/*Menu.propTypes = {
-	*				listClass: PropTypes.string,
-	*				iconClass: PropTypes.string,
-	*				textClass: PropTypes.string,
-	*				linkType: PropTypes.string,
-	*				listItems: PropTypes.array.isRequired,
-	*				listType: PropTypes.string,
-	*}
-	**/
 Menu.propTypes = {
 				children: React.PropTypes.node,
 				style: React.PropTypes.string,

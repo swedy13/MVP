@@ -1,40 +1,9 @@
 import React, { Component } from 'react';
 
 // Components
-import Menu from '../../views/Menu.jsx';
+import Menu					from '../../views/Menu.jsx';
 import ListItem from '../../views/ListItem.jsx';
 import FontIcon from '../../views/FontIcon.jsx';
-
-/*<div className="sb">
-	*<div className="sb-panel">
-	*Panel
-	*</div>
-	*<ul className="vertical full-height full-width max-spacing sb-menu">
-	*<Menu menuClass="vertical full-width regular sb-apps"
-	*listClass="dark-toggle"
-	*iconClass="larger white z1"
-	*linkType="none"
-	*listItems={sidebarList}
-	*listType="icon"/>
-	*<Menu menuClass="vertical full-width regular sb-utility"
-	*listClass="dark-toggle"
-	*iconClass="white z1"
-	*linkType="none"
-	*listItems={sidebarUtility}
-	*listType="icon"/>
-	*</ul>
-	*</div>*/
-
-
-/*<Menu style="vertical full-width regular sb-apps">
-	*<ListItem style="dark-toggle"
-	*content="Subscriptions"
-	*icon={<FontIcon icon="subscriptions" vendor="fa fa-fw"/>}>
-	*</Menu>
-	*<Menu style="vertical full-width regular sb-utility">
-	*<ListItem>
-	*</ListItem>
-	*</Menu>*/
 
 
 export default class Sidebar extends Component {
@@ -44,24 +13,36 @@ export default class Sidebar extends Component {
 																<div className="sb-panel">
 																				Panel
 																</div>
-																<Menu style="vertical full-height full-width max-spacing sb-menu">
-																				{this.renderList(sidebarApps)}
-																</Menu>
-																<Menu style="vertical full-height full-width max-spacing sb-menu">
-																				{this.renderList(sidebarUtility)}
+																<Menu style="vertical full-height full-width max-spacing setc-mdr sb-menu">
+																				<Menu style="vertical full-width regular sb-apps">
+																								{this.renderList(sidebarApps)}
+																				</Menu>
+																				<Menu style="vertical full-width regular sb-apps">
+																								{this.renderList(sidebarUtility)}
+																				</Menu>
 																</Menu>
 												</div>
 								);
 				}
 
 				renderList(list) {
-								let result = [];
+								let results = [];
 
 								list.map((item, key) => {
-												result.push(<li key={key}>{item}</li>);
+												let url = item.replace(/\s+/g, '-').toLowerCase();
+												let icon = (<FontIcon key="icon"
+																																		icon={item}
+																																		style="larger white t-z1"
+																																		vendor="fa fa-fw"/>);
+
+												results.push(
+																<ListItem key={key}
+																										style="dark-toggle setc-mdr hover"
+																										icon={icon}/>
+												);
 								});
 
-								return result;
+								return results;
 				}
 }
 
